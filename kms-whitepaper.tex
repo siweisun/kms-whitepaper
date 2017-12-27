@@ -1,10 +1,10 @@
-\documentclass[longbibliography,nofootinbib]{revtex4-1}
+\documentclass[conference]{IEEEtran}
 
 \newcommand{\kms}{NuCypher KMS}
 
 \usepackage{listings}
-\usepackage{graphicx}
-\usepackage{amsmath}
+\usepackage[pdftex]{graphicx}
+\usepackage[cmex10]{amsmath}
 \usepackage[margin=5pt]{subfig}
 \usepackage[usenames]{color}
 
@@ -28,15 +28,19 @@
 
 \title{\kms: Decentralized key management system}
 
-\author{Michael Egorov}
-\email{michael@nucypher.com}
-\author{MacLane Wilkison}
-\email{maclane@nucypher.com}
-\affiliation{NuCypher}
+\author{\IEEEauthorblockN{Michael Egorov}
+\IEEEauthorblockA{NuCypher,\\
+Email: michael@nucypher.com}
+\and
+\IEEEauthorblockN{MacLane Wilkison}
+\IEEEauthorblockA{NuCypher,\\
+Email: maclane@nucypher.com}
+\and
+\IEEEauthorblockN{David Nu{\~n}ez}
+\IEEEauthorblockA{NICS Lab, Universidad de M{\'a}laga, Spain,\\
+Email: dnunez@lcc.uma.es}}
 
-\author{David Nu{\~n}ez}
-\email{dnunez@lcc.uma.es}
-\affiliation{NICS Lab, Universidad de M{\'a}laga, Spain}
+\maketitle
 
 \begin{abstract}
     \kms~is a decentralized Key Management System (KMS) that addresses the limitations of using consensus
@@ -49,13 +53,6 @@
     \kms~will be an essential part of decentralized applications,
     just as SSL/TLS is an essential part of every secure web application.
 \end{abstract}
-
-\date{\today}
-\maketitle
-
-\tableofcontents
-
-\newpage
 
 \section{Introduction}
 
@@ -637,7 +634,7 @@ where $n$ is number of fractions into which we split re-encryption key~(Sec.~\re
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\textwidth]{pdf/miners-ruler.pdf}
+    \includegraphics[width=0.9\columnwidth]{pdf/miners-ruler.pdf}
     \caption{Selecting random nodes according to proof of stake.
              Stake of each node $d_i$ is represented as a line segment.
              The segments are stacked together into a larger segment with the length $D$.
@@ -846,6 +843,7 @@ We also thank Dave Evans at the University of Virginia for advising our company 
 and his help with regards to the current state of the art in multi-party computation.
 And Stefano Bernardi, Tom Ding, and many others for their help on token economics.
 
-\bibliography{kms-whitepaper}
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,kms-whitepaper}
 
 \end{document}
